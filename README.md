@@ -15,18 +15,22 @@ Patient Portal is a basic Patient management system, where the user (ie. recepti
 - Install **Python** (recommended version >= 3.10)
 - Install **Gitbash** (Optional)
 
-## Building project environment
+## Downloading 
 
 Follow these steps to install the repository requirements:
 
+You can fork repository or you can clone repository. 
+
+### If you want fork: 
+
 1. **Fork this Repository**
-Click on button:
-![image](https://github.com/amhkhowaja/patients-portal-for-students/assets/63882136/be42fa88-157b-44b8-a1f4-31a2083dd983)
+
+https://github.com/gerelee357/patients-portal-for-students
 
 Then,
 Rename the repo name to *patients-portal* and click Create Fork.
 
-1. **Clone the Repository from your list of repositories:**
+2. **Clone the Repository from your list of repositories:**
 
 ```bash
 git clone https://github.com/<your-username>/patients-portal.git
@@ -37,12 +41,27 @@ git clone https://github.com/<your-username>/patients-portal.git
 cd patient-portal
 ```
 
-3. **Create a virtual environment**
+### if you want to clone: 
+
+
+2. **Clone the Repository **
+
+```bash
+git clone https://github.com/gerelee357/patients-portal-for-students
+```
+
+3. **Navigate to the Repository:**
+```bash
+cd patients-portal-for-students
+
+## Building project environment
+
+1. **Create a virtual environment**
 ```bash
 python -m venv venv
 ```
 
-4. **Activate the virtual environment**
+2. **Activate the virtual environment**
 
 *In linux (gitbash)*
 
@@ -55,7 +74,7 @@ source venv/bin/activate
 source venv/Scripts/activate
 ```
 
-5. **Install Python packages to run the application**
+3. **Install Python packages to run the application**
 ```bash
 python -m pip install -r requirements.txt
 ```
