@@ -53,6 +53,7 @@ git clone https://github.com/gerelee357/patients-portal-for-students
 3. **Navigate to the Repository:**
 ```bash
 cd patients-portal-for-students
+```
 
 ## Building project environment
 
