@@ -36,7 +36,8 @@ class PatientAPIController:
         pass
 
     def get_patients(self):
-        pass
+
+        return "Halo"
 
     def get_patient(self, patient_id):
         pass
@@ -45,7 +46,7 @@ class PatientAPIController:
         pass
 
     def delete_patient(self, patient_id):
-        pass #proba
+        pass
 
     def run(self):
         """
