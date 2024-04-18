@@ -45,7 +45,7 @@ class PatientAPIController:
         pass
 
     def delete_patient(self, patient_id):
-        pass
+        pass #proba
 
     def run(self):
         """
