@@ -1,4 +1,7 @@
-"""Patient API Controller"""
+"""
+Patient API Controller
+BY ANTAL JOLÁN TÍMEA UP7P2A
+"""
 
 from flask import Flask, request, jsonify
 from patient_db import PatientDB
@@ -45,7 +48,7 @@ class PatientAPIController:
                 return jsonify({"error": "Room is not valid"}), 400
             
             if data["patient_ward"] not in WARD_NUMBERS:
-                return jsonify({"error": "Room is not valid"}), 400
+                return jsonify({"error": "Ward is not valid"}), 400
         
             self.patient_db.insert_patient(data)
 
@@ -59,7 +62,7 @@ class PatientAPIController:
         if patients is not None:
             return patients
         
-        return  {[]}
+        return  jsonify({"error": "An error occured and could not get patients"}), 400
 
     def get_patient(self, patient_id):
         patient = self.patient_db.select_patient(patient_id)
@@ -81,7 +84,7 @@ class PatientAPIController:
                 return jsonify({"error": "Room is not valid"}), 400
             
             if data["patient_ward"] not in WARD_NUMBERS:
-                return jsonify({"error": "Room is not valid"}), 400
+                return jsonify({"error": "Ward is not valid"}), 400
         
             self.patient_db.update_patient(patient_id,data)
 
@@ -93,7 +96,9 @@ class PatientAPIController:
     def delete_patient(self, patient_id):
         deletation = self.patient_db.delete_patient(patient_id)
         if deletation is None:
-            return jsonify({"error": "Could not delete pationt or no patient with this id"}), 400
+            return jsonify({"error": "Could not delete patient"}), 400
+        elif deletation == 0:
+            return jsonify({"error": "No patient with this id"}), 400
         
         return jsonify({"message": "Patient Deleted successfully"}), 200
 
